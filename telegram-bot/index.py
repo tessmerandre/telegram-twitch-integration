@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 
 import logging
+from os import environ
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from FileManager.index import save_user
 
-BOT_TOKEN = '2048360234:AAHwmUQUEZUf9Jhc7JCg37vJAOUwAOBQ-rU'
+BOT_TOKEN = environ['TELEGRAM_TOKEN']
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
